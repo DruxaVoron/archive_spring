@@ -20,10 +20,10 @@ public class FileServiceImpl implements FileService {
     }
 
     @Override
-    public Long save(String name, int archive_id) {
+    public File save(String name, int archive_id) {
         File file = new File(name, archive_id);
 
-        return fileRepository.save(file).getId();
+        return fileRepository.save(file);
     }
 
     @Override

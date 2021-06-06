@@ -24,9 +24,9 @@ public class FileArchiveServiceImpl implements FileArchiveService {
     }
 
     @Override
-    public Long save(String name) {
+    public FileArchive save(String name) {
         FileArchive fileArchive = new FileArchive(name);
-        return fileArchiveRepository.save(fileArchive).getId();
+        return fileArchiveRepository.save(fileArchive);
     }
 
     @Override

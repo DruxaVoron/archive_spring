@@ -19,7 +19,7 @@ public class FileController {
     }
 
     @PostMapping("/file/add")
-    public Long createFileInArchive(@RequestParam String name, @RequestParam int archive_id){
+    public File createFileInArchive(@RequestParam String name, @RequestParam int archive_id){
         return fileService.save(name, archive_id);
     }
 
