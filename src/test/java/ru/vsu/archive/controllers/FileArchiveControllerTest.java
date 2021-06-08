@@ -75,6 +75,8 @@ class FileArchiveControllerTest {
 
     @Test
     void createFileArchive() {
+//        с этим тестом только немного не получается, почему-то выдает непонятную ошибку,
+//        попытался разобраться но не нашел в чем проблема
         FileArchive fileArchive1 = new FileArchive("archive1");
         fileArchive1.setId(1L);
         Mockito.when(fileArchiveService.save(any())).thenReturn(fileArchive1);
